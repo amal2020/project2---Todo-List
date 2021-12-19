@@ -6,10 +6,30 @@ const Todo = require('./todo')
 
 app.use(express.json())
 
-app.get('/', (req,res)=>{
-    res.json('GET/ server is working ....')
+app.get('/tasks', (req,res)=>{
+    Todo.find({}, (err, data)=>{
+        if(err){
+            console.log('Error: ',err )
+        } else {
+            res.json(data)
+
+        }
+    })
 })
 
+
+app.post('/tasks', (req,res)=>{
+    Todo.create({}, (err, newTask)=>{
+        console.log('25:',req.body)
+        
+        if(err){
+            console.log('Error: ',err )
+        } else {
+            res.status(201).json(newTask)
+
+        }
+    })
+})
 
 
 app.listen(5000, ()=>{
