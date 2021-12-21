@@ -4,7 +4,7 @@ const {Schema, model} = require('mongoose')
 //schema اسكيما 
 
 const todoSchema = new Schema({
-    Title:String,
+    title:String,
     isCompleted:Boolean
 })
 
