@@ -1,9 +1,15 @@
-.App {
-  border: red solid Spx;}
+.App{
+  border: red solid 5px;
+}
 
 
+.Todo{
+  border: blue solid 3px;
+}
+.Todo span{
+  margin: 0px 10px 0px 10px;
+}
 
-  .Todo{
-    border: red solid Spx;
-  
-  }
+.Add{
+  border: green solid 3px;
+}
